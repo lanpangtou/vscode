@@ -1,0 +1,478 @@
+html,body{
+    font-size: 15px;
+    font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+button{
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+ul,li,ol{
+    list-style: none;
+}
+/*
+导航条
+*/
+.navbar-fixed-container{
+    height: 50px;
+
+    color: rgb(164,164,167);
+}
+.navbar-inverse{
+    background-color: rgb(44,44,50);
+}
+.navbar-brand{
+    padding-left: 35px;
+    background-image: url("../images/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 0px 12px;
+}
+/*
+导航条里面的搜索框
+*/
+.search-form{
+    height:50px;position: relative;color:white;
+}
+.search-icon{
+    height:100%;width: 50px;position: absolute;left: 0px;outline: none;border: none;background-color: rgb(61,61,66);
+    background-image: url("../images/搜索.png");background-repeat: no-repeat;background-position: center;transform: rotate(90deg);
+}
+.search-form:hover .search-icon{
+    background-color: rgb(82,82,87);
+}
+.search-form:hover .search{
+    background-color: rgb(82,82,87);
+}
+.search{
+    width:190px;height:100%;outline: none;border: none;padding-left: 50px;background-color: rgb(61,61,66);
+}
+/*
+导航条里面的下载链接按钮
+*/
+.downloadicon{
+    width:45px;height:50px;text-align: center;
+}
+.link-download:hover{
+    background-color: rgb(0,91,164) !important;
+}
+/*
+版本提示信息
+ */
+.Version{
+    width: 100%;background-color: rgb(37,37,43);text-align: center;padding-top:14px;color: white;position: relative;
+    display: block;
+}
+.glyphicon-remove:hover{
+    color: white!important;
+}
+#close{
+    position: absolute;right: 15px;line-height: 100%;top:15px;
+}
+/*
+home编辑器界面展示以及下载区域
+*/
+.main-container{
+    color:rgb(171,171,173);
+}
+.codeEditor{
+    width: 100%;
+    background-color: rgb(44,44,50);
+    padding-bottom: 35px;
+}
+.codeEditor_left{
+    text-align: center;
+    padding-top: 40px;
+}
+.codeEditor_left h1{
+    font-weight: normal;
+    font-size: 46px;
+}
+.link-download-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: rgb(0,102,184);
+    font-size:18px;
+    color:white;
+}
+.build-type{
+    display: block;
+    color:rgb(166,202,230);
+}
+.link-download-btn:hover{
+    background-color: rgb(0,91,164);
+}
+.download-dropdown{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align:end;
+    background-color:rgb(0,102,184);
+    padding: 30px 20px;
+    padding-bottom: 38px;
+    background-image: url("../images/向下箭头.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.download-dropdown:hover{
+    background-color: rgb(0,91,164);
+}
+.screenshot{
+    width: 100%;
+    height: 565px;
+    background-image: url("../images/home-screenshot-win-lg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.download-dropdown-list{
+    width: 320px;
+    height: 215px;
+    border: 2px solid rgb(0,102,184);
+    background-color: rgb(242,242,242);
+    position: absolute;
+    top:70px;
+    left: -243px;
+    display: none;
+    z-index: 999;
+}
+.download-dropdown-list-table{
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+/*下载矩阵标签*/
+.download-matrix-label{
+    width: 287px;
+    margin:20px auto;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(37,37,43);
+    position: relative;
+}
+.sanjiao{
+    width: 16px;
+    height:16px;
+    background-color: rgb(37,37,43);
+    position: absolute;top:-7px;
+    right: 20px;
+    transform: rotate(45deg);
+}
+.terms{
+
+    font-size: 13px;
+    margin: auto;
+}
+/*
+工具列表
+*/
+.value-prop{
+    display: block;
+    text-align: center;
+    padding: 2rem 0px;
+    color: black;
+}
+.value-prop {
+    text-decoration: none;
+}
+.value-prop:hover{
+    text-decoration: none;
+    background-color: rgb(227,227,227);
+}
+.value-prop-icon{
+    width: 5rem;
+    height: 5rem;
+    background-image: url("../images/valueprops-top-sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 20.6rem 10.4rem;
+    margin: auto;
+
+    transform:scale(0.7);
+}
+.IntelliSense{
+    background-position: 0 0 ;
+}
+.Debugging{
+    background-position: -5.2rem 0;
+}
+.BuiltinGit{
+    background-position: -10.4rem 0;
+}
+.Extensions{
+    background-position: -15.6rem 0;
+}
+.value-prop:hover .IntelliSense{
+    background-position:0 -5.3rem;
+}
+.value-prop:hover .Debugging{
+    background-position:-5.2rem -5.3rem;
+}
+.value-prop:hover .BuiltinGit{
+    background-position:-10.4rem  -5.3rem;
+}
+.value-prop:hover .Extensions{
+    background-position:-15.6rem -5.3rem;
+}
+/*
+   轮播图区域
+*/
+.rotation-container{
+    padding: 80px 0px;
+    background-color: rgb(245,245,245);
+}
+#tweet{
+    height: 200px;
+    position: relative;
+}
+.profile-image{
+    width:5rem;
+    height:5rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    float: left;
+}
+#tweet .text-context{
+    width: 18rem;
+    padding-top: 4px;
+    margin-left: 5px;
+    font-size: 18px;
+    display: inline-block;
+    display: inline-block;
+
+}
+/*
+    工具介绍
+*/
+.meet-intellisense,.powerful-debugging,.Hundreds-of-Extensions{
+    padding: 3rem 0;
+}
+.intellisense-img,.powerful-debugging-img,.Extensions-img{
+    width:100%;
+    margin-top: 30px;
+    vertical-align: center;
+}
+.Extensions-img:hover{
+    transform: scale(1.05);
+    transition: 1s ease;
+}
+.powerful-debugging, .getting-started,.Hundreds-of-Extensions{
+    background-color: rgb(245,245,245);
+}
+.Prop-description{
+    margin-bottom: 3.5rem;line-height: 3rem;font-size: 1.2rem;
+}
+.getting-started{
+    padding-bottom:50px;
+}
+.vscode-for{
+    height: 17rem;
+    padding-top:6.5rem;
+    text-align: right;
+}
+.started-btn{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px 35px;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(0,102,184);
+}
+.started-btn:hover{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(0,91,164);
+}
+.languages-list-item{
+    padding: 3rem 0;
+    font-size: 2rem;
+    list-style: none;
+    height: 17rem;
+    overflow: hidden;
+}
+/*
+    系统分类下载按钮区
+*/
+.download-container{
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0px 4rem;
+}
+.download-type{
+    padding: 0 25px;
+    display: inline-block;
+}
+.logon-window,.logon-liunx,.logon-mac{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.logon-window{
+    background-image: url("../images/windows-logo.png");
+}
+.logon-liunx{
+    background-image: url("../images/linux-logo.png");
+}
+.logon-mac{
+    background-image: url("../images/apple-logo.svg");
+}
+.window-btn,.mac-btn{
+    margin: 20px 0 5px;
+    width: 240px;
+    background-color: #0066B8;
+    border: none;
+    outline: none;
+    padding: 10px 0px;
+    color: white;
+    font-weight: bold;
+}
+.liunx-btn{
+    width: 147px;
+    padding: 10px 0px;
+    background-color: #0066B8;
+    border: none;
+    outline: none;
+    display: inline-block;
+    color:white;
+    font-weight: bold;
+}
+.window-btn:hover,.mac-btn:hover,.liunx-btn:hover{
+    background-color: rgb(0,91,164);
+}
+.download-type img{
+    width: 16px;height: 16px;
+    margin-right: 10px;
+}
+.download-type small{
+    font-weight: normal;
+    color: rgba(255,255,255,0.65);
+}
+.download-digit-table{
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.download-digit-table td{
+    text-align: center;
+    padding: 0px 7px;
+
+}
+/*
+        内部人员标注介绍
+  */
+.insiders-callout{
+    text-align: center;
+    background-color: rgb(245,245,245);
+}
+.callout-text,.privacy-terms{
+    padding: 20px 18%;
+}
+.privacy-terms p{
+    line-height: 3rem;
+}
+/*
+页脚友情链接
+*/
+.footer{
+    padding: 23px 0px;
+    background-color: rgb(51,51,51);
+    color:white;
+}
+.footer a{
+    color:white;
+    text-decoration: none;
+}
+.footer a:hover{
+    color:rgb(134,150,255);
+}
+.links li{
+    display: inline-block;
+    margin: 5px 7px;
+    padding: 0px;
+}
+.footright{
+    font-size: 12px;
+}
+.github{
+    background-image: url("../images/github.png");
+    background-size: 12px 12px ;
+    background-repeat: no-repeat;
+    padding-left: 20px!important;
+    background-position: 4px 4px;
+}
+.github,.github-count{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: rgb(226,226,226);
+    color:black!important;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.github-count{
+    position: relative;
+}
+.footer .github-count-sanjiao{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top:6px;
+    left: -2px;
+    background-color: rgb(226,226,226);
+    transform: rotate(45deg);
+}
+.links li{
+    text-align: unset;
+    vertical-align: top;
+}
+
+/*
+    屏幕缩放需要改变的样式
+*/
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+    .search-form{
+        width: 50px;
+    }
+    .search{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    .search-form{
+        width: 100%;
+    }
+    .search{
+        width: 100%;
+    }
+    .intellisense-img,.powerful-debugging-img{
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+    .Extensions-img{
+        width: 40%;
+    }
+    .vscode-for{
+        text-align: center;
+        height: 10rem;
+    }
+    .languages-list{
+        text-align: center;
+
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 990px) {
+    .downloadtext{
+        display: none;
+    }
+}
+@media screen and (min-width: 954px){
+}

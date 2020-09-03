@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+       
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        //点击×关闭版本提示信息
+        $(function () {
+            $("#close").click(function () {
+                $(".Version").css("display","none");
+            })
+            //下载链接按钮下拉菜单
+            $(".download-dropdown").click(function () {
+                $(".download-dropdown-list").slideToggle();
+            })
+        })
+    </script>
+</head>
+<body>
+<!--导航条-->
+<div class="navbar-fixed-container">
+    <div class="navbar navbar-inverse navbar-fixed-top affix-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="color: white">Visual Studio Code</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="Doc.html">Docs</a></li>
+                    <li><a href="#about">Updates</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#contact" >API</a></li>
+                    <li><a href="#contact">Extensions</a></li>
+                    <li><a href="#contact" data-toggle="modal" data-target="#myModal">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" >
+                    <li>
+                        <form class="search-form">
+                            <button class="search-icon"></button>
+                            <input class="search" type="text" placeholder="Search Docs">
+                        </form>
+                    </li>
+                    <li>
+                        <a href="#" class="link-download" style="height: 50px;background-color: rgb(0,102,184);color: white;">
+                            <span class="downloadicon">
+                                <img src="images/download.svg" alt="" style="height: 16px;width: 20px;margin-top: -4px">
+                            </span>
+                            <span class="downloadtext" style="font-weight: bold">Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 版本提示-->
+<div class="Version">
+    <div class="container-fluid" style="padding-right: 40px;">
+        <p>
+            <a href="#"  data-toggle="tooltip" data-placement="bottom" title="Click to see more version numbers" style="color: rgb(19,152,255);">Version 1.41</a>
+            is now available! Read about the new features and fixes from November.
+        </p>
+    </div>
+    <div id="close" style="">
+        <span  class="glyphicon glyphicon-remove" style="color: rgb(120,120,123)"></span>
+    </div>
+</div>
+
+<!--主要内容展示区-->
+<div class="main-container">
+    <div class="codeEditor">
+        <div class="container">
+            <div class="row codeEditor_left">
+                <div class="col-md-4">
+<!--                    编辑器文字描述-->
+                    <h1 style="color:white">
+                        Code editing.
+                        <strong>Redefined.</strong>
+                    </h1>
+                    <p style="font-size: 16px;">
+                        Free. Built on open source. Runs everywhere.
+                    </p>
+<!--                    下载按钮区域-->
+                    <div class="download-buttons">
+                        <div class="link-download-button">
+                            <button class="link-download-btn">
+                                Download for Windows
+                                <small class="build-type">Stable Build</small>
+                            </button>
+                            <button class="download-dropdown">
+<!--                               download-dropdown的表格内容 -->
+                                <div class="download-dropdown-list">
+                                    <table class="download-dropdown-list-table">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Stable</td>
+                                            <td>Insiders</td>
+                                        </tr>
+                                        <tr style="border-bottom: 1px solid #ccc">
+                                            <td style="font-weight: bold">macOS</td>
+                                            <td>Package</td>
+                                            <td><img src="images/download_blue.svg" alt="" style="width:16px;height: 16px;"></td>
+                                            <td><img src="images/download_dark.svg" alt="" style="width:16px;height: 16px;"></td>
+                                        </tr>
+                                        <tr  style="border-bottom: 1px solid #ccc">
+                                            <td style="font-weight: bold">Windows x64</td>
+                                            <td>User Installer</td>
+                                            <td><img src="images/download_blue.svg" alt="" style="width:16px;height: 16px;"></td>
+                                            <td><img src="images/download_dark.svg" alt="" style="width:16px;height: 16px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Linux x64</td>
+                                            <td>.deb</td>
+                                            <td><img src="images/download_blue.svg" alt="" style="width:16px;height: 16px;"></td>
+                                            <td><img src="images/download_dark.svg" alt="" style="width:16px;height: 16px;"></td>
+                                        </tr>
+                                        <tr  style="border-bottom: 1px solid #ccc">
+                                            <td></td>
+                                            <td>.deb</td>
+                                            <td><img src="images/download_blue.svg" alt="" style="width:16px;height: 16px;"></td>
+                                            <td><img src="images/download_dark.svg" alt="" style="width:16px;height: 16px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" style="color: rgb(0,102,184)"><a href="#">Other downloads</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </button>
+                        </div>
+                        <p class="download-matrix-label">
+                            <a href="#" style="color:rgb(0,102,184);">Other platforms</a> and <a href="#" style="color:rgb(0,102,184);">Insiders Edition</a>
+                            <span class="sanjiao"></span>
+                        </p>
+                        <p class="terms">By using VS Code, you agree to its <br><a href="#" style="font-size: 12px;">license and privacy statement.</a></p>
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="screenshot">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="value-props">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#" class="value-prop">
+                        <div class="value-prop-icon IntelliSense"></div>
+                        IntelliSense
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#" class="value-prop">
+                        <div class="value-prop-icon Debugging"></div>
+                        Debugging
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#" class="value-prop">
+                        <div class="value-prop-icon BuiltinGit"></div>
+                        Built-in Git
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#" class="value-prop">
+                        <div class="value-prop-icon Extensions"></div>
+                        Extensions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 所有的产品介绍-->
+<div class="IntroductionOfProps">
+    <!--轮播容器-->
+    <div class="rotation-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+<!--                   轮播图整个盒子-->
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- 轮播图内容 -->
+                        <div class="carousel-inner" role="listbox">
+<!--                            第一个-->
+                            <div class="item active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/Una.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Una Kravets</strong>
+                                                    <span>@Una</span>
+                                                </a>
+                                                VS<a href="">@Code</a>
+                                                does so many things right. I’m constantly impressed by
+                                                the UX, and customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting better ❤️
+                                            </div>
+                                        </div>
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/jadbox.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Jonathan Dunlap</strong>
+                                                    <span>@jadbox</span>
+                                                </a>
+                                                Awesome - VS Code will have deep remote development: you can connect to a
+                                                container running a different OS and be able to use any VS Code plugins/linting/debugging for that environment. 🔥🔥🔥
+                                            </div>
+                                        </div>
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/PKodmad.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Pavithra Kodmad</strong>
+                                                    <span>@PKodmad</span>
+                                                </a>
+                                                VS Code is my most used and favorite editor. I love being able to
+                                                customize the editor - changing the layout, the icons, fonts and color scheme is so easy!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!--                            第二个-->
+                            <div class="item">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/MrDarrenV.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Darren</strong>
+                                                    <span>@MrDarrenV</span>
+                                                </a>
+                                                Just as I thought @code couldn't get better, out comes its Remote Development
+                                                plugins in the Stable version that let you remote into containers as a dev environment! 😍
+                                            </div>
+                                        </div>
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/cassidoo.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Cassidy Williams</strong>
+                                                    <span>@cassidoo</span>
+                                                </a>
+                                                I was a vim fan, but then discovered VS Code's Vim plugin, which lets me add
+                                                in my vim keybindings. I can maintain my coding style without having to compromise on speed.
+                                            </div>
+                                        </div>
+                                        <div id="tweet" class="col-md-4">
+                                            <a class="profile-image" href="#" style="background-image: url(images/lauragift21.jpg)"></a>
+                                            <div class="text-context">
+                                                <a href="#" style="display: block">
+                                                    <strong>Gift Egwuenu</strong>
+                                                    <span>@lauragift21</span>
+                                                </a>
+                                                I love @code, the built-in markdown previewer is awesome and
+                                                the plugin system allows me to use GitLens, which makes my workflow so much easier.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 按钮控制 -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meet-intellisense">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="images/home-intellisense.svg" alt="" class="intellisense-img">
+                </div>
+                <div class="col-sm-7">
+                    <h2>Meet IntelliSense.</h2>
+                    <p class="Prop-description">Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart
+                        completions based on variable types, function definitions, and imported modules.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="powerful-debugging">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2>Print statement debugging is a thing of the past.</h2>
+                    <p class="Prop-description">Debug code right from the editor. Launch or attach to your running apps and
+                        debug with break points, call stacks, and an interactive console.</p>
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 3.5rem">
+                    <img class="powerful-debugging-img" src="images/home-debug.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meet-intellisense">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="images/home-git.svg" alt="" class="intellisense-img">
+                </div>
+                <div class="col-sm-7">
+                    <h2>Git commands built-in.</h2>
+                    <p class="Prop-description">Working with Git and other SCM providers has never been easier.
+                        Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Hundreds-of-Extensions">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2>Extensible and customizable.</h2>
+                    <p class="Prop-description">Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services.
+                        Extensions run in separate processes, ensuring they won't slow down your editor. Learn more about extensions.</p>
+                </div>
+                <div class="col-sm-4" style="margin-bottom: 3.5rem">
+                    <a href="#"><img class="Extensions-img" src="images/Hundreds-of-Extensions.png" style="width: 100%;" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meet-intellisense">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="images/home-azure.svg" alt="" class="intellisense-img">
+                </div>
+                <div class="col-sm-7">
+                    <h2>Deploy with confidence and ease</h2>
+                    <p class="Prop-description">With Microsoft Azure you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query
+                        relational and document based data, and scale with serverless computing, all with ease, all from within VS Code.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="getting-started">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 vscode-for">
+                    <h2>VS Code for</h2>
+                </div>
+                <div class="col-sm-6">
+                        <div class="languages-list">
+                            <ul class="languages-list-item"><li>F#</li><li>Java</li><li>Lua</li><li>HandleBars</li>
+                                <li>C#</li><li>Ini</li><li>Swift</li><li>Objective-C</li><li>Coffee Script</li>
+                                <li>HTML</li><li>Perl</li><li>Less</li><li>TypeScript</li><li>Rust</li><li>Dockerfile</li>
+                                <li>JSON</li><li>Python</li><li>SQL</li><li>Haxe</li><li>PHP</li><li>Clojure</li><li>Sass</li>
+                                <li>JavaScript</li><li>Makefile</li><li>PowerShell</li><li>C++</li><li>XML</li><li>Jade</li>
+                                <li>R</li><li>Batch</li><li>CSS</li><li>Markdown</li><li>Go</li><li>Visual Basic</li>
+                                <li>Groovy</li><li>Ruby</li><li>Razor</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center">
+                    <a href="#" class="started-btn">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="download-btns">
+        <div class="download-container">
+                <div class="download-type">
+                    <div class="logon-window"></div>
+                    <button class="window-btn">
+                        <img src="images/download.svg" alt="">
+                        Window</br>
+                        <small>Windows 7, 8, 10</small>
+                    </button>
+                    <table class="download-digit-table">
+                        <tr>
+                            <td><strong>User Installer</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                            <td><a href="#">32 bit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Installer</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                            <td><a href="#">32 bit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>.zip</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                            <td><a href="#">32 bit</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="download-type">
+                    <div class="logon-liunx"></div>
+                        <button class="liunx-btn">
+                            <img src="images/download.svg">
+                            .deb</br>
+                            <small>Debian, Ubuntu</small>
+                        </button>
+                        <button class="liunx-btn">
+                            <img src="images/download.svg" alt="">
+                            .rpm
+                            <small>Red Hat, Fedora, SUSE</small>
+                        </button>
+                    <table class="download-digit-table">
+                        <tr>
+                            <td><strong>.deb</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>.rpm</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>.tar.gz</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Snap</strong></td>
+                            <td><a href="#">64 bit</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="download-type">
+                    <div class="logon-mac"></div>
+                    <button class="mac-btn">
+                        <img src="images/download.svg" alt="">
+                        Mac</br>
+                        <small>macOS 10.10+</small>
+                    </button>
+                </div>
+        </div>
+    </div>
+    <div class="insiders-callout">
+        <div class="container">
+            <div class="row">
+               <div class="callout-text">
+                   <h2 style="font-size: 20px">Want new features sooner?</h2>
+                   <p>Get the <a href="#">Insiders build</a> instead.</p>
+               </div>
+            </div>
+            <div class="privacy-terms">
+                <h3 style="font-size: 20px">LICENSE AND PRIVACY TERMS</h3>
+                <p>By downloading and using Visual Studio Code, you agree to the <a href="#">license terms</a> and <a href="#">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product.
+                    If you would prefer not to have this data sent please go see <a href="#">How to Disable Crash Reporting</a> to learn how to disable it.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footleft col-md-7">
+                <ul class="links">
+                    <li>Hello from Seattle.</li>
+                    <li><a href="#">Follow @code</a></li>
+                    <li>
+                        <a href="#" class="github">star</a>
+                        <a href="#" class="github-count">88,869
+                            <span class="github-count-sanjiao"></span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="footright col-md-5">
+                <ul class="links">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#"> Privacy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">License</a></li>
+                    <li style="font-size: 12px;">
+                        <img src="images/microsoft-logo.png" style="width: 92px;height: 20px;"><br>
+                        <span>&copy;2019 Microsoft</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">frequently asked questions</h4>
+            </div>
+            <div class="modal-body">
+                Please wait for update for more details
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

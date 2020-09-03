@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/Doc.css">
+    <style>
+
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $(".side-nav-list-item").click(function () {
+                $(this).children(".side-nav-list-item-ul").slideToggle();
+                $(this).siblings().children(".side-nav-list-item-ul").slideUp();
+            })
+            $(".yes").click(function () {
+              $(".pinglun").css("display","block");
+              $(".shifou").css("display","none");
+              $(".help-text").text("Additional feedback (1000 characters left)");
+            })
+            $(".submit").click(function () {
+                $(".pinglun").css("display","none");
+                $(".help-text").text("Thank you!We appreciate your feedback.");
+                setTimeout(function () {
+                    $(".helpbox").hide(100)
+                },2000)
+            })
+        })
+    </script>
+</head>
+<body>
+<!--导航条-->
+<div class="navbar-fixed-container">
+    <div class="navbar navbar-inverse navbar-fixed-top affix-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="color: white">Visual Studio Code</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="Doc.html">Docs</a></li>
+                    <li><a href="#about">Updates</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#contact">API</a></li>
+                    <li><a href="#contact">Extensions</a></li>
+                    <li><a href="#contact" data-toggle="modal" data-target="#myModal">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" >
+                    <li>
+                        <form class="search-form">
+                            <button class="search-icon"></button>
+                            <input class="search" type="text" placeholder="Search Docs">
+                        </form>
+                    </li>
+                    <li>
+                        <a href="#" class="link-download" style="height: 50px;background-color: rgb(0,102,184);color: white;">
+                            <span class="downloadicon">
+                                <img src="images/download.svg" alt="" style="height: 16px;width: 20px;margin-top: -4px">
+                            </span>
+                            <span class="downloadtext" style="font-weight: bold">Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主要内容区-->
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="main-left col-md-2 col-sm-12" style="overflow: auto">
+<!--                TOPICS <span style="display: inline-block;width: 100%;border: 1px solid black;">asd</span>-->
+                <div class="side-nav">
+                    <ul class="side-nav-list">
+                        <li class="side-nav-list-item" style="padding-bottom: 18px;font-size: 14px;font-weight: bold">
+                            <a href="#" style="color: rgb(0,113,188)">Overview</a></li>
+                        <li class="side-nav-list-item"><a href="#">SETUP</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Overview</li>
+                                <li>Linux</li>
+                                <li>macOS</li>
+                                <li>Windows</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Network</li>
+                                <li>Additional Components</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">GET STARTED</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">USER GUIDE</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Basic Editing</li>
+                                <li>Extension Marketplace</li>
+                                <li>IntelliSense</li>
+                                <li>Code Navigation</li>
+                                <li>Refactoring</li>
+                                <li>Debugging</li>
+                                <li>Version Control</li>
+                                <li>Integrated Terminal</li>
+                                <li>Multi-root Workspaces</li>
+                                <li>Tasks</li>
+                                <li>Snippets</li>
+                                <li>Emmet</li>
+                                <li>Command Line</li>
+                                <li>Accessibility</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">LANGUAGES</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">NODE.JS / JAVASCRIPT</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">TYPESCRIPT</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">PYTHON</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">JAVA</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">C++</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">AZURE</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-list-item"><a href="#">REMOTE</a>
+                            <ul class="side-nav-list-item-ul">
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Intro Videos</li>
+                                <li>Tips and Tricks</li>
+                                <li>User Interface</li>
+                                <li>Themes</li>
+                                <li>Settings</li>
+                                <li>Key Bindings</li>
+                                <li>Display Language</li>
+                                <li>Telemetry</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-nav2">
+                    TOPICS <select style="display: inline-block;width: 260px;font-size: 15px">
+                    <option value="">Overview</option><option value="">Overview</option><option value="">Overview</option>
+                    <optgroup label="SETUP">
+                        <option value="asd">Overview</option>
+                        <option value="">Linux</option>
+                        <option value="">macOS</option>
+                        <option value="">Windows</option>
+                        <option value="">Network</option>
+                        <option value="">Additional Components</option>
+                    </optgroup>
+                    <optgroup label="SETUP">
+                        <option value="asd">Overview</option>
+                        <option value="">Linux</option>
+                        <option value="">macOS</option>
+                        <option value="">Windows</option>
+                        <option value="">Network</option>
+                        <option value="">Additional Components</option>
+                    </optgroup>
+                </select>
+                </div>
+            </div>
+            <div class="main-center col-md-8 col-sm-9" style="height: 1000px;overflow: auto" data-spy="scroll" data-target="#extend" data-offset="30" >
+              ` <h1 id="a">Getting Started</h1>
+                <p>
+                    Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go)
+                    and runtimes (such as .NET and Unity). Begin your journey with VS Code with these introductory videos.
+                </p>
+                <h1 id="VS-Code-in-Action">Visual Studio Code in Action</h1>
+                <div class="lunbo" style="padding: 20px;background-color: rgb(242,242,242); ">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="div-img"></div>
+                                <div class="carousel-caption">
+                                    <h3>Intelligent Code Completion</h3>
+                                    <a href="#">Code smarter with IntelliSense - completions for variables</a>, methods, and imported modules.
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="div-img" style="background-image: url(images/debug_b.png)"></div>
+                                <div class="carousel-caption">
+                                    <h3>Streamlined Debugging</h3>
+                                    Print debugging is a thing of the past. <a href="#">Debug</a> in VS Code with your terminal tools.
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="div-img" style="background-image: url(images/multi-cursor-edit.png)"></div>
+                                <div class="carousel-caption">
+                                    <h3>Fast, Powerful Editing</h3>
+                                    <a href="#">Linting, multi-cursor editing</a>, parameter hints, and other powerful editing features.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h1 id="Top-Extensions">Top Extensions</h1>
+                Enable additional languages, themes, debuggers, commands, and more. VS Code's growing community
+                shares their secret sauce to improve your workflow.
+                <h1 id="First-Steps">First Steps</h1>
+                <p>
+                    To get the most out of Visual Studio Code, start by reviewing a few introductory topics:
+                    Intro Videos - Begin your journey with VS Code through these introductory videos.
+                    Setup - Install VS Code for your platform and configure the tool set for your development needs.
+                    User Interface - Introduction to the basic UI, commands, and features of the VS Code editor.
+                    Settings - Customize VS Code for how you like to work.
+                    Languages - Learn about VS Code's support for your favorite programming languages.
+                    Node.js - This tutorial gets you quickly running and debugging a Node.js web app.
+                    Tips and Tricks - Jump right in with Tips and Tricks to become a VS Code power user.
+                    Azure - VS Code is great for deploying your web applications to the cloud.
+                    Extension API - Learn how to write a VS Code extension.
+                    Why VS Code? - Read about the design philosophy and architecture of VS Code
+                </p>
+                <h1 id="Keyboard-Shortcuts">Keyboard Shortcuts</h1>
+                <p>
+                    Increase your productivity with VS Code's keyboard shortcuts.
+                    Keyboard Shortcut Reference Sheet - Learn the commonly used keyboard shortcuts.
+                    Keymap Extensions - Change VS Code's keyboard shortcuts to match another editor.
+                    Customize Keyboard Shortcuts - Modify the default keyboard shortcuts
+                </p>
+                <h1 id="Downloads">Downloads</h1>
+                <p>
+                    Download VS Code - Quickly find the appropriate install for your platform (Windows, macOS and Linux)
+                </p>
+                <h1 id="Privacy">Privacy</h1>
+                <p>
+                    By default, VS Code auto-updates to new versions, and collects usage data and crash report information. You may opt out of these defaults by disabling them as instructed below:
+                    <br>How do I disable auto update?
+                    How do I disable crash reporting?<br>
+                    How do I disable usage reporting?</p>
+                <div class="helpbox" style="width:80%;color:black;background-color: rgb(225,241,255);padding:20px">
+                    <span class="help-text">Was this documentation helpful?</span><br>
+                    <div class="pinglun" style="display: none">
+                        <textarea style="width: 100%;margin-top: 20px" rows="3"></textarea><br>
+                        <button class="submit" style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 0px 5px 0px 0px;">Submit</button>
+                        <button style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 0px 5px 0px 0px;">Skip this</button>
+                    </div>
+                    <div class="shifou" style="display: block">
+                        <button class="yes" style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 20px 5px 0px 0px;">Yes</button>
+                        <button style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 20px 0px 0px 0px;">No</button>
+                    </div>
+                    </div>
+            </div>
+            <div class="main-right col-md-2 col-sm-3">
+                <nav id="extend" class="navbar-default">
+                    <h4>Getting Started</h4>
+                    <ul class="extend-list nav navbar-nav">
+                        <li><a href="#VS-Code-in-Action">VS Code in Action</a></li>
+                        <li><a href="#Top-Extensions">Top Extensions</a></li>
+                        <li><a href="#First-Steps">First Steps</a></li>
+                        <li><a href="#Keyboard-Shortcuts">Keyboard Shortcuts</a></li>
+                        <li><a href="#Downloads">Downloads</a></li>
+                        <li><a href="#Privacy">Privacy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--页脚-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footleft col-md-7">
+                <ul class="links">
+                    <li>Hello from Seattle.</li>
+                    <li><a href="#">Follow @code</a></li>
+                    <li>
+                        <a href="#" class="github">star</a>
+                        <a href="#" class="github-count">88,869
+                            <span class="github-count-sanjiao"></span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="footright col-md-5">
+                <ul class="links">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#"> Privacy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">License</a></li>
+                    <li style="font-size: 12px;">
+                        <img src="images/microsoft-logo.png" style="width: 92px;height: 20px;"><br>
+                        <span>&copy;2019 Microsoft</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">frequently asked questions</h4>
+            </div>
+            <div class="modal-body">
+                Please wait for update for more details
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

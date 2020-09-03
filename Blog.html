@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/Blog.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $(".side-nav-list-item").click(function () {
+                $(this).children(".side-nav-list-item-ul").slideToggle();
+                $(this).siblings().children(".side-nav-list-item-ul").slideUp();
+            })
+            $(".yes").click(function () {
+                $(".pinglun").css("display","block");
+                $(".shifou").css("display","none");
+                $(".help-text").text("Additional feedback (1000 characters left)");
+            })
+            $(".submit").click(function () {
+                $(".pinglun").css("display","none");
+                $(".help-text").text("Thank you!We appreciate your feedback.");
+                setTimeout(function () {
+                    $(".helpbox").hide(100)
+                },2000)
+            })
+        })
+    </script>
+</head>
+<body>
+<!--导航条-->
+<div class="navbar-fixed-container">
+    <div class="navbar navbar-inverse navbar-fixed-top affix-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="color: white">Visual Studio Code</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="Doc.html">Docs</a></li>
+                    <li><a href="#about">Updates</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#contact">API</a></li>
+                    <li><a href="#contact">Extensions</a></li>
+                    <li><a href="#contact" data-toggle="modal" data-target="#myModal">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" >
+                    <li>
+                        <form class="search-form">
+                            <button class="search-icon"></button>
+                            <input class="search" type="text" placeholder="Search Docs">
+                        </form>
+                    </li>
+                    <li>
+                        <a href="#" class="link-download" style="height: 50px;background-color: rgb(0,102,184);color: white;">
+                            <span class="downloadicon">
+                                <img src="images/download.svg" alt="" style="height: 16px;width: 20px;margin-top: -4px">
+                            </span>
+                            <span class="downloadtext" style="font-weight: bold">Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主要内容区-->
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="main-left col-md-2 col-sm-12" style="overflow: auto">
+                <!--                TOPICS <span style="display: inline-block;width: 100%;border: 1px solid black;">asd</span>-->
+                <div class="side-nav">
+                    <ul class="side-nav-list">
+                        <li class="side-nav-list-item" style="padding-bottom: 18px;font-size: 14px;font-weight: bold">
+                            <a href="#" style="color: rgb(0,113,188)">BLOG POSTS</a></li>
+                        <li class="side-nav-list-item"><a href="#">Inspecting Containers</a></li>
+                        <li class="side-nav-list-item"><a href="#">WSL 2</a></li>
+                        <li class="side-nav-list-item"><a href="#">Remote SSH</a></li>
+                        <li class="side-nav-list-item"><a href="#">Strict null checking</a></li>
+                        <li class="side-nav-list-item"><a href="#">Remote Development</a></li>
+                        <li class="side-nav-list-item"><a href="#">Language Server Index Format</a></li>
+                        <li class="side-nav-list-item"><a href="#">Rich Code Navigation</a></li>
+                        <li class="side-nav-list-item"><a href="#">Event-Stream Package Security Update</a></li>
+                        <li class="side-nav-list-item"><a href="#">Using Azure Pipelines</a></li>
+                        <li class="side-nav-list-item"><a href="#">GitHub Pull Requests</a></li>
+                        <li class="side-nav-list-item"><a href="#">New home for Debug Adapter Protocol</a></li>
+                        <li class="side-nav-list-item"><a href="#">Logpoints and auto-attach</a></li>
+                        <li class="side-nav-list-item"><a href="#">Live Share Preview</a></li>
+                        <li class="side-nav-list-item"><a href="#">Settings Search</a></li>
+                        <li class="side-nav-list-item"><a href="#">Using Azure Pipelines</a></li>
+                        <li class="side-nav-list-item"><a href="#">Text Buffer Reimplementation</a></li>
+                        <li class="side-nav-list-item"><a href="#">What's New for Chrome Debugging</a></li>
+                        <li class="side-nav-list-item"><a href="#">Logpoints and auto-attach</a></li>
+                        <li class="side-nav-list-item"><a href="#">Connect 2017</a></li>
+                        <li class="side-nav-list-item"><a href="#">Introducing Live Share</a></li>
+                        <li class="side-nav-list-item"><a href="#">Settings Search</a></li>
+                        <li class="side-nav-list-item"><a href="#">Using Azure Pipelines</a></li>
+                        <li class="side-nav-list-item"><a href="#">Text Buffer Reimplementation</a></li>
+                        <li class="side-nav-list-item"><a href="#">What's New for Chrome Debugging</a></li>
+                        <li class="side-nav-list-item"><a href="#">Logpoints and auto-attach</a></li>
+                        <li class="side-nav-list-item"><a href="#">Connect 2017</a></li>
+                        <li class="side-nav-list-item"><a href="#">Introducing Live Share</a></li>
+                    </ul>
+                </div>
+                <div class="side-nav2">
+                    TOPICS <select style="display: inline-block;width: 260px;font-size: 15px">
+                    <option value="">Overview</option><option value="">Overview</option><option value="">Overview</option>
+                    <optgroup label="SETUP">
+                        <option value="asd">Overview</option>
+                        <option value="">Linux</option>
+                        <option value="">macOS</option>
+                        <option value="">Windows</option>
+                        <option value="">Network</option>
+                        <option value="">Additional Components</option>
+                    </optgroup>
+                    <optgroup label="SETUP">
+                        <option value="asd">Overview</option>
+                        <option value="">Linux</option>
+                        <option value="">macOS</option>
+                        <option value="">Windows</option>
+                        <option value="">Network</option>
+                        <option value="">Additional Components</option>
+                    </optgroup>
+                </select>
+                </div>
+            </div>
+            <div class="main-center col-md-8 col-sm-9" style="height: 1000px;overflow: auto" data-spy="scroll" data-target="#extend" data-offset="30" >
+                ` <h1 id="Inspecting-Containers">Inspecting Containers with VS Code</h1>
+                <p>
+                    October 31, 2019 by Bowden Kelly, @bowdenk7 <br>
+                    When developing containerized applications, it is common to try to debug build and runtime issues by attaching a shell to the running container using docker exec --it {containerID} /bin/sh.
+                    This technique allows you to inspect the container environment via the command line, but it doesn't give you a rich set of tools to diagnose issues.
+                    <img src="images/docker-exec.png" style="height: 200px;width: 100%;">
+                    <br>
+                    In this post, we'll look at how you can attach Visual Studio Code to your container so that you can use the full power of VS Code, including debugging, to inspect the container, figure out what is going wrong, and fix it.
+                    <br>
+                    The Remote - Containers extension, which launched in May of this year, allows you to connect your local VS Code to a container host while maintaining all of your personalized settings, themes, and key bindings.
+                </p>
+                <h1 id="Prerequisites">Prerequisites</h1>
+                <p>
+                    This blog post presumes you have Docker Desktop and Visual Studio Code installed. You will also need the Remote - Containers extension. To install the Remote - Containers extension, open the Extensions view (Ctrl+Shift+X), search for "Remote Containers", select Install, and restart VS Code if prompted
+                </p>
+                <h1 id="The-application">The application</h1>
+                The first thing we need is an application that we can run in a container. If you've got one, great! You can skip this step. If not, you can clone this simple Node.js Express application.
+                Note: You do not need Node.js installed locally, we will run this application in the container!
+                git clone https://github.com/microsoft/vscode-express-sample.git
+                This application has a simple Dockerfile that is based off the Node 10 image, as well as a docker-compose.yml file that we will use to run the image, expose the appropriate ports, and map in the local file system. We are running Node with the –inspect flag so that we can debug the app as we would when running locally. In a real application, you would probably want a separate Docker Compose file for your production deployment.
+                Note: You don't need a Docker Compose file, you can also attach to containers created with a single Dockerfile
+                <h1 id="Build-and-run">Build and run</h1>
+                <p>
+                    To build and run the application, we'll first install the dependencies and then run docker-compose up from the terminal/command prompt. This will download the Node base image, copy over dependencies, and start the container:
+                    docker-compose up
+                    <img src="images/docker-compose-output.png" style="width: 100%">
+                    If everything worked, you should see output like this:
+                    <img src="images/welcome-express.png" style="width: 100%">
+                    And, you should be able to navigate to http://localhost:3000 and see the following:
+                </p>
+                <h1 id="Attach-to-the-container">Attach to the container</h1>
+                <p>
+                    We can now use the Remote - Containers extension to attach to our running container, inspect the environment, and debug the application.
+                    Select the Remote Explorer in the Activity Bar to see a list of running containers that you can attach to in the Other Containers section. Find the container we just started, it has the name 'express_server_1', and then attach to it by using the Connect to Container button. That container should now be displayed in the Attached Containers section of the Remote Explorer.
+                    This will launch a new VS Code window (instance) that has the following notification in the bottom right.
+                    During this time, VS Code is installing an instance of the VS Code Server inside the container where your app is running. To see more details and progress about this installation step, you can select the details link that is shown in the notification. Once the VS Code server is installed, your local VS Code client will connect to the remote VS Code server. The result is your local instance of VS Code, with all your settings, themes, and key bindings, is connected to a "back-end" running inside the container alongside your application.
+                </p>
+                <h1 id="Debug-inside-the-container">Debug inside the container</h1>
+                <p>
+                    To further show how similar the remote container is to a local environment, let's attach a debugger. We started our Node app with the –inspect parameter in docker-compose.yaml, so all we have to do is attach a debugger to that process.
+                    In the Command Palette (Ctrl+Shift+P), search for and select Debug: Attach to Node Process. There will probably be several Node processes running inside the container. We want the process that is running our application, so select the one that shows bin/www.s
+                    Next, open index.js and place a breakpoint on line 6 by clicking on the gutter or pressing F9 on:
+                    res.render('index', { title: 'Express' });
+                    Now go to http://localhost:3000 in your browser and see the breakpoint trigger as expected
+                </p>
+                <h1 id="Install-extensions">Install extensions</h1>
+                <p>
+                    Just like a normal instance of VS Code, you can install and use extensions while attached to a remote container.
+                    Depending on the type of extension, it can either run on the client side or in the container on the remote VS Code server. Extensions that are primarily UI-based such as themes and snippets stay on the client side, while all other extensions are installed in the container. This allows you to have only the extensions you need when working in each environment while maintaining a consist UI across all environments.
+                    If you open the Extensions view (Ctrl+Shift+X), you will see the list of extensions that you have installed locally and extensions you have installed in your current container instance. Locally installed extensions that need to be installed in the container (like the Azure Account extension below) will appear grayed out.
+                </p>
+                <div class="helpbox" style="width:80%;color:black;background-color: rgb(225,241,255);padding:20px">
+                    <span class="help-text">Was this documentation helpful?</span><br>
+                    <div class="pinglun" style="display: none">
+                        <textarea style="width: 100%;margin-top: 20px" rows="3"></textarea><br>
+                        <button class="submit" style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 0px 5px 0px 0px;">Submit</button>
+                        <button style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 0px 5px 0px 0px;">Skip this</button>
+                    </div>
+                    <div class="shifou" style="display: block">
+                        <button class="yes" style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 20px 5px 0px 0px;">Yes</button>
+                        <button style="background-color: rgb(0,91,164);padding: 5px 20px;color:white;margin: 20px 0px 0px 0px;">No</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right col-md-2 col-sm-3">
+                <nav id="extend" class="navbar-default">
+                    <h4>Getting Started</h4>
+                    <ul class="extend-list nav navbar-nav">
+                        <li><a href="#Inspecting-Containers">Inspecting Containers</a></li>
+                        <li><a href="#Prerequisites">Prerequisites</a></li>
+                        <li><a href="#The-application">The application</a></li>
+                        <li><a href="#Build-and-run">Build and run</a></li>
+                        <li><a href="#Attach-to-the-container">Attach to the container</a></li>
+                        <li><a href="#Debug-inside-the-container">Debug inside the container</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--页脚-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footleft col-md-7">
+                <ul class="links">
+                    <li>Hello from Seattle.</li>
+                    <li><a href="#">Follow @code</a></li>
+                    <li>
+                        <a href="#" class="github">star</a>
+                        <a href="#" class="github-count">88,869
+                            <span class="github-count-sanjiao"></span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="footright col-md-5">
+                <ul class="links">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#"> Privacy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">License</a></li>
+                    <li style="font-size: 12px;">
+                        <img src="images/microsoft-logo.png" style="width: 92px;height: 20px;"><br>
+                        <span>&copy;2019 Microsoft</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">frequently asked questions</h4>
+            </div>
+            <div class="modal-body">
+                Please wait for update for more details
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

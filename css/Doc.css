@@ -1,0 +1,253 @@
+html,body{
+    font-size: 15px;
+    font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+button{
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+}
+ul,li,ol{
+    list-style: none;
+}
+/*
+导航条
+*/
+.navbar-fixed-container{
+    height: 50px;
+
+    color: rgb(164,164,167);
+}
+.navbar-inverse{
+    background-color: rgb(44,44,50);
+}
+.navbar-brand{
+    padding-left: 35px;
+    background-image: url("../images/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 0px 12px;
+}
+/*
+导航条里面的搜索框
+*/
+.search-form{
+    height:50px;position: relative;color:white;
+}
+.search-icon{
+    height:100%;width: 50px;position: absolute;left: 0px;outline: none;border: none;background-color: rgb(61,61,66);
+    background-image: url("../images/搜索.png");background-repeat: no-repeat;background-position: center;transform: rotate(90deg);
+}
+.search-form:hover .search-icon{
+    background-color: rgb(82,82,87);
+}
+.search-form:hover .search{
+    background-color: rgb(82,82,87);
+}
+.search{
+    width:190px;height:100%;outline: none;border: none;padding-left: 50px;background-color: rgb(61,61,66);
+}
+/*
+导航条里面的下载链接按钮
+*/
+.downloadicon{
+    width:45px;height:50px;text-align: center;
+}
+.link-download:hover{
+    background-color: rgb(0,91,164) !important;
+}
+/*
+页脚友情链接
+*/
+.footer{
+    padding: 23px 0px;
+    background-color: rgb(51,51,51);
+    color:white;
+}
+.footer a{
+    color:white;
+    text-decoration: none;
+}
+.footer a:hover{
+    color:rgb(134,150,255);
+}
+.links li{
+    display: inline-block;
+    margin: 5px 7px;
+    padding: 0px;
+}
+.footright{
+    font-size: 12px;
+}
+.github{
+    background-image: url("../images/github.png");
+    background-size: 12px 12px ;
+    background-repeat: no-repeat;
+    padding-left: 20px!important;
+    background-position: 4px 4px;
+}
+.github,.github-count{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: rgb(226,226,226);
+    color:black!important;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.github-count{
+    position: relative;
+}
+.footer .github-count-sanjiao{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top:6px;
+    left: -2px;
+    background-color: rgb(226,226,226);
+    transform: rotate(45deg);
+}
+.links li{
+    text-align: unset;
+    vertical-align: top;
+}
+/*
+主要内容样式
+*/
+/*左边内容*/
+.main-left{
+    position: sticky;
+    font-size: 12px;
+    width: 175px;
+    padding-top: 20px;
+    top:70px!important;
+    height: 700px;
+}
+.side-nav{
+    width:175px;
+}
+.side-nav-list{
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 0px -20px;
+    display: block;
+}
+.side-nav-list .side-nav-list-item{
+    width: 100%;
+    padding: 8px 0px 8px 15px;
+    border-left: 1px solid #ccc;
+    display: block;
+    font-weight: 600;
+}
+.side-nav-list .side-nav-list-item:hover{
+    border-left: 1px solid rgb(0,113,188);
+}
+.side-nav-list .side-nav-list-item a{
+    display: block;
+    width: 100%;
+    color: rgb(113,113,113);
+    text-decoration: none;
+}
+.side-nav-list-item-ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+.side-nav-list-item-ul li{
+    padding: 5px 0px 5px 15px;
+}
+.side-nav2{
+    display: none;
+}
+/*中间内容*/
+.main-center{
+    color: #8c8c8c;
+}
+.main-center p{
+    line-height: 35px;
+}
+.main-center h1{
+    font-weight: normal;
+}
+.div-img{
+    height:520px;
+    background-image: url(../images/intellisense_b.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: rgb(242,242,242);
+}
+.main-center .carousel-caption{
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    left: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.language-list{
+    width: 100%;
+    background-color: red;
+
+}
+/*右边内容*/
+.main-right{
+    position: sticky;
+    top:70px!important;
+    height: 700px;
+}
+.extend-list{
+    margin: 0px;
+    padding: 0px;
+}
+.extend-list a{
+    color: black;
+}
+/*
+   屏幕缩放需要改变的样式
+*/
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+    .search-form{
+        width: 50px;
+    }
+    .search{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    .search-form{
+        width: 100%;
+    }
+    .search{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 990px) {
+    .downloadtext{
+        display: none;
+    }
+}
+@media screen and (max-width: 990px){
+    .main-left{
+        position: relative;
+        width: 768px;
+        height: 50px;
+        margin:40px 0px;
+    }
+    .side-nav{
+        display: none;
+    }
+    .side-nav-list{
+        width: 100%;
+        border: 1px solid black;
+    }
+    .side-nav2{
+        display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    .main-right{
+        display: none;
+    }
+}
+::-webkit-scrollbar {display:none}
